@@ -85,3 +85,31 @@ spark-submit \
   --base_path /user \
   --source_db curated
   
+  -------------------------
+ 6. EXPORTAR GOLD TO CSV
+-------------------------
+
+spark-submit \
+--master yarn \
+--deploy-mode client \
+--conf spark.sql.warehouse.dir=/user/hadoop/warehouse \
+/mnt/c/Users/fchav/Documents/Topicos/electriv-vehicle/datalake/procesos/export_gold_to_csv.py
+
+---------------------------------------------
+ 7. CREAR COPIAR part*.csv RENOMBRAR GOLD.CSV
+----------------------------------------------
+
+cp /home/hadoop/electriv-vehicle/datalake/temp/part*.csv \
+/mnt/c/Users/fchav/Documents/Topicos/electriv-vehicle/datalake/gold.csv
+
+
+--------------------
+8. MIGRAR A MONGODB
+--------------------
+spark-submit \
+--master yarn \
+--deploy-mode client \
+--packages org.mongodb.spark:mongo-spark-connector_2.12:10.3.0 \
+export_gold_to_mongodb.py
+
+
