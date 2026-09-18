@@ -2,6 +2,8 @@
 
 **Procesamiento de datos de vehículos eléctricos con PySpark, Hive, MongoDB y Power BI.**
 
+Este repositorio es un **fork de [frankchavel/topicos-electric-vehicle](https://github.com/frankchavel/topicos-electric-vehicle)**. Se conserva la autoría y el historial del proyecto original; esta copia incorpora documentación de presentación y reproducción.
+
 Proyecto académico que organiza un flujo de datos por capas: carga inicial, normalización, limpieza y agregación. El repositorio incluye scripts, datos de ejemplo, un informe y un archivo de Power BI.
 
 ## Flujo implementado
